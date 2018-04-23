@@ -1,0 +1,23 @@
+{
+  "name": "word-guess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allenjwelch/Word-Guess.git"
+  },
+  "author": "Allen Welch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allenjwelch/Word-Guess/issues"
+  },
+  "homepage": "https://github.com/allenjwelch/Word-Guess#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "prompt": "^1.0.0"
+  }
+}
