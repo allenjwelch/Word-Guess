@@ -23,7 +23,13 @@ function newWord() {
   let rand = Math.floor(Math.random() * 6); 
   // gameWord = wordList[rand]; 
   gameWord = new Word(wordList[rand]);
-  console.log(gameWord); 
+  // return gameWord; 
+  console.log(gameWord.word); 
+  // console.log(gameWord.wordArr); 
+  // console.log(Letter.checked); 
+    // console.log(this.wordArr[0].isGuessed); /// --->> Getting closer!!!!
+
+
 }
 
 function userInput() {
@@ -35,6 +41,17 @@ function userInput() {
       }
     ]).then(input => {
       userGuess = input.userGuess; 
+      let wordLetters = gameWord.wordArr; 
+      wordLetters.forEach(letter => letter.checked(userGuess));
+        // console.log(gameWord.wordArr); 
+
+      userInput(); 
     });
   }
 }
+
+// **index.js**: The file containing the logic for the course of the game, which depends on `Word.js` and:
+
+//   * Randomly selects a word and uses the `Word` constructor to store it
+
+//   * Prompts the user for each guess and keeps track of the user's remaining guesses
